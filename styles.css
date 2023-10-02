@@ -1,0 +1,110 @@
+/*pasiekiame elementą per elemento pavadinimą */
+p {
+    background: black;
+    color: red;
+}
+
+/*pasiekiame elementą per id attributą*/
+#paragrafas1 {
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+}
+
+/*pasiekiame elementą per class attributą*/
+.klase1 {
+    background: coral;
+}
+
+/*CSS nesting parinkiklis parenka elemente/klasėje/id esantį kitą elementą/klasę/id.*/
+.klase2 h1 {
+    color: rebeccapurple;
+    border-style: dotted;
+    border-color: rebeccapurple;
+    border-width: 10px;
+}
+
+/* CSS GRUPAVIMAS*/
+h4, h5 {
+    color: brown;
+}
+
+
+h5.heading {
+    font-size: 30px;
+    border: 5px dashed red;
+}
+
+.pirma-dezute {
+    /* kiekvienas elementas numatytuoju atveju naudoja box-sizing: content-box */
+    box-sizing: content-box;
+    width: 300px;
+    margin: 25px;
+    padding: 50px;
+    border: brown 5px solid;
+    background: coral;
+
+    /*.btn--lg {*/
+    /*    margin-top: 80px;*/
+    /*    width: 200px;*/
+    /*    border-radius: 30px;*/
+    /*    color: white !important;*/
+    /*    display: flex !important;*/
+    /*    justify-content: center;*/
+    /*}*/
+}
+
+.antra-dezute {
+    box-sizing: border-box;
+    width: 300px;
+    margin: 25px;
+    padding: 50px;
+    border: brown 5px solid;
+    background: coral;
+}
+
+.input-container > form > *{
+    display: block;
+    margin-bottom: 16px;
+}
+
+.parent {
+    display: inline-flex;
+    flex-direction: row; /* tai yra numatytoji flex-direction reikšmė */
+    background: aqua;
+}
+
+.child {
+    border: 3px solid red;
+    height: 50px;
+    margin: 16px;
+    background: brown;
+/*  vaikiniam elementui mes galime uždėti property flex-grow  */
+    flex-grow: 1;
+}
+
+.child5 {
+    flex-grow: 5 !important;
+}
+
+/**/
+
+.konteineris {
+    display: flex;
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap;*/
+    /*flex-flow: row wrap;*/
+    gap: 50px;
+    justify-content: center;
+
+    flex: 1;
+    /* tas pats*/
+    flex-grow: 1;
+
+}
+
+.vaikas {
+    flex:  1 0 350px;
+    height: 200px;
+    background: coral;
+}
